@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Quote</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this quote?</h1>
+    <p>"{{ quote.text }}" - {{ quote.author }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'quote_list' %}">Back to Quote List</a>
+</body>
+</html>

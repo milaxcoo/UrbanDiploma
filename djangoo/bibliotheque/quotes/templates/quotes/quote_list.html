@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Library</title>
+</head>
+<body>
+    <h1>Quote Library</h1>
+    <a href="{% url 'add_quote' %}">Add New Quote</a>
+    <ul>
+        {% for quote in quotes %}
+            <li>
+                "{{ quote.text }}" - {{ quote.author }}
+                <a href="{% url 'edit_quote' quote.pk %}">Edit</a>
+                <a href="{% url 'delete_quote' quote.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

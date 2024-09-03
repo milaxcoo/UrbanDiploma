@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Quote</title>
+</head>
+<body>
+    <h1>Add a New Quote</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'quote_list' %}">Back to Quote List</a>
+</body>
+</html>

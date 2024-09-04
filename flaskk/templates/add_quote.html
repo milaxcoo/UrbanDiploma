@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add New Quote</h2>
+<form method="POST">
+    <label for="text">Quote:</label>
+    <textarea name="text" id="text" required></textarea><br>
+    <label for="author">Author:</label>
+    <input type="text" name="author" id="author" required><br>
+    <button type="submit">Add Quote</button>
+</form>
+{% endblock %}

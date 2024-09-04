@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="/add">Add New Quote</a>
+<ul>
+    {% for quote in quotes %}
+        <li>
+            "{{ quote.text }}" - {{ quote.author }}
+            <a href="/edit/{{ quote.id }}">Edit</a>
+            <form action="/delete/{{ quote.id }}" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

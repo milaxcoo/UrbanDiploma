@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edit Quote</h2>
+<form method="POST">
+    <label for="text">Quote:</label>
+    <textarea name="text" id="text" required>{{ quote.text }}</textarea><br>
+    <label for="author">Author:</label>
+    <input type="text" name="author" id="author" required value="{{ quote.author }}"><br>
+    <button type="submit">Edit Quote</button>
+</form>
+{% endblock %}
